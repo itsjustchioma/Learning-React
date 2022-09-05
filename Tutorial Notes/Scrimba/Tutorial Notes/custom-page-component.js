@@ -11,7 +11,7 @@ Render your list to the page
  */
  
  import React from "react";
- import ReactDOM from "react/dom";
+ import ReactDOM from "react-dom";
  
  function LoveReact(){
   <div>
