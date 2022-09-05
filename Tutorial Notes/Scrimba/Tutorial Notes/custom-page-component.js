@@ -14,6 +14,7 @@ Render your list to the page
  import ReactDOM from "react-dom";
  
  function LoveReact(){
+  return(
   <div>
    <h1>Reasons I Love React.</h1>
    <ol list-style-type="decimal">
@@ -23,6 +24,7 @@ Render your list to the page
      <li>React allows me work smarted not harder</li>
     </ol>
   </div>
+   )
  };
 
 ReactDOM.render(<LoveReact />, document.getElementById("root"));
