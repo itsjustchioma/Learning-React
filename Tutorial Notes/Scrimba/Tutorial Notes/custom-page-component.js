@@ -26,10 +26,12 @@ Part 2:
  function LoveReact(){
   return(
   <div>
-   <nav>
-    <h1>Why I Love React</h1>
-    <img src="./react-logo.png" width="40px" />
-   </nav>
+    <header>
+    <nav>
+      <img src="./react-logo.png" width="40px" />
+    </nav>
+   </header>
+   <h1>Why I Love React</h1>
    <ol list-style-type="decimal">
      <li>I love React because of its versatility of flexibilty.</li>
      <li>I love React because of its reusable components.</li>
