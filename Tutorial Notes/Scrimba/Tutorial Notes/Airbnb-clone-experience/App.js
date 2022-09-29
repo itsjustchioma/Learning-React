@@ -15,12 +15,22 @@ Challenge: Pass props to the Card component and display that data
 
 */
 
-export default function App() {
-            // <Hero />
-    return (
-        <div>
-            <Navbar />
-            <Card />
-        </div>
-    )
+
+function App(){
+  return(
+    <div>
+      <Navbar />
+      <Hero />
+      <Card 
+        image={require("./Images/image 12 (1).png")} alt="person"
+        rating= "5.0"
+        review = "6"
+        country = "South Africa"
+        title = "Life Lessons With Kate"
+        price = "136"
+      />
+    </div>
+  )
 }
+
+export default App;
