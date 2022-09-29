@@ -24,10 +24,10 @@ function App(){
       <Card 
         image={require("./Images/image 12 (1).png")} alt="person"
         rating= "5.0"
-        review = "6"
+        review = {6}
         country = "South Africa"
         title = "Life Lessons With Kate"
-        price = "136"
+        price = {136}
       />
     </div>
   )
