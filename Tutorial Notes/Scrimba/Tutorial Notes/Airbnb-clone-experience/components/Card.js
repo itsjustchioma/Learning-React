@@ -1,17 +1,20 @@
-import React from "react"
+import React from "react";
+import '../index.css';
 
-export default function Card() {
-    return (
-        <div className="card">
-            <img src="../images/katie-zaferes.png" className="card--image" />
+function Card(props){
+    return(
+        <div className="img-grid">
+            <img src={props.image} alt="swimmer" className="card--image" />
             <div className="card--stats">
-                <img src="../images/star.png" className="card--star" />
-                <span>5.0</span>
-                <span className="gray">(6) • </span>
-                <span className="gray">USA</span>
+                <img src={require("../Images/Star 1.png")} alt="star" className="card--star"/>
+                <span>{props.rating}</span>
+                <span className="gray">({props.review}) • </span>
+                <span className="gray">{props.country}</span>
             </div>
-            <p>Life Lessons with Katie Zaferes</p>
-            <p><span className="bold">From $136</span> / person</p>
+            <p>{props.title}</p>
+            <p><span className="bold">From ${props.price}</span> / person</p>
         </div>
     )
 }
+
+export default Card;
