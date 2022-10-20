@@ -1,36 +1,23 @@
-import React from "react"
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import Card from "./components/Card"
+import React from "react";
+import '../index.css';
+import data from "../data";
 
-/*
-Challenge: Pass props to the Card component and display that data
-
-- img ("katie-zaferes.png")
-- rating ("5.0")
-- reviewCount (6)
-- country (Whatever you want)
-- title ("Life Lessons with Katie Zaferes")
-- price (136)
-
-*/
-
-
-function App(){
-  return(
-    <div>
-      <Navbar />
-      <Hero />
-      <Card 
-        image={require("./Images/image 12 (1).png")} alt="person"
-        rating= "5.0"
-        review = {6}
-        country = "South Africa"
-        title = "Life Lessons With Kate"
-        price = {136}
-      />
-    </div>
-  )
+function Card(props){
+    let badgeText;
+    return(
+        <div className="card">
+        {props.openSpots === 0 && <div className="card--badge">SOLD OUT</div>}
+            <img src= {props.img} alt={props.alt} className="card--image" />
+            <div className="card--stats">
+                <img src={require("../Images/Star 1.png")} alt="star" className="card--star"/>
+                <span>{props.rating}</span>
+                <span className="gray">({props.review}) • </span>
+                <span className="gray">{props.location}</span>
+            </div>
+            <p>{props.title}</p>
+            <p><span className="bold">From ${props.price}</span> / person</p>
+        </div>
+    )
 }
 
-export default App;
+export default Card;
